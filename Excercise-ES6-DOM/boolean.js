@@ -1,24 +1,17 @@
-class Boolean{
-    nand(bool1, bool2) {
-        var x = (bool1 && bool2 == true) ? "false":"true";
-        const bool1 = document.getElementById('bool1');
-        const bool2 = document.getElementById('bool2');
-        const sub = document.getElementById("sub");
-        sub.addEventListener("click", )
-        
-    }
-}
+const button = document.getElementById('button');
+const bool1 = document.getElementById('bool1');
+const bool2 = document.getElementById('bool2');
 
-// const bool = document.getElementById("bool");
-// const bool1 = document.getElementById('bool1');
-// const bool2 = document.getElementById('bool2');
 
-bool.addEventListener('submit', onsubmit);
+button.addEventListener('submit', e => {
+    e.preventDefault();
+    nand();
+});
 
-function onsubmit(e) {
-    // e.preventDefault();
-    // console.log(bool1.value);
-    document.getElementById("bool3").innerHTML.value = "true";
-}
-
+function nand(){
+    const val1 = bool1.value.trim();
+    const val2 = bool2.value.trim();
+    const result = ((val1 && val2) == "true") ? "false":"true";
+    console.log(result);
+};
 

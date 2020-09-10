@@ -320,7 +320,7 @@
 // }
 // console.log(rotate(['a', 'b', 'c'])); //[ 'b', 'c', 'a' ]
 // console.log(rotate(['1','2', '3', '4' ])); //[ '2', '3', '4', '1' ]
-
+    
 // //39
 // function contains(val, n) {
 //     for(let i=0; i<val.length;i++) {
