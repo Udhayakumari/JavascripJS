@@ -46,8 +46,10 @@ function emailCheck() {
 
 // check password
 function passwordCheck() {
-    if(password.value.length <= 3) {
-        spassword.innerHTML = "Password must be at least 3 characters!";
+    const pattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{6,})$/;
+    const val = pattern.test(String(password.value));
+    if(val !== true) {
+        spassword.innerHTML = "Password must be least of 6 characters with special characters!";
     }
 }
 
